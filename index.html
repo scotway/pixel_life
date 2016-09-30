@@ -15,15 +15,30 @@
       width: 100vw;
       overflow: hidden;
       position: fixed;
-	  font-family: Tahoma,Verdana,Segoe,sans-serif;
+	    font-family: Tahoma,Verdana,Segoe,sans-serif;
     }
-	header {
+	header, footer {
 		color:#FFF;
-	 	text-align:center;
-		padding: 3px 10px;
+    width:95vw;
+		font-size: 20px;
+    text-align:center;
 	}
+  @media only screen and (max-width : 480px) {
+    header, footer {
+  		font-size: 14px;
+  	}
+  }
 	h1 {
 		margin: 0;
+	}
+	footer {
+		height:4vh;
+    color: #fff;
+    padding-top: 5px;
+		position:fixed;
+		bottom: 0vh;
+		background-color: #555;
+		z-index:100;
 	}
     div {
       float: left;
@@ -65,7 +80,7 @@
 		<h1>Pixel Life</h1>
 		<p>What can you draw with these pixels? They only have 3 seconds of life. Just hover over or tap a square.</p>
 	</header>
-	<span>
+	<footer>See how many different shapes you can pull off.</footer>
       <div/></div><div></div><div></div><div></div><div></div><div/></div><div></div><div></div><div></div><div></div>
       <div/></div><div></div><div></div><div></div><div></div><div/></div><div></div><div></div><div></div><div></div>
       <div/></div><div></div><div></div><div></div><div></div><div/></div><div></div><div></div><div></div><div></div>
@@ -129,7 +144,6 @@
       <div/></div><div></div><div></div><div></div><div></div><div/></div><div></div><div></div><div></div><div></div>
       <div/></div><div></div><div></div><div></div><div></div><div/></div><div></div><div></div><div></div><div></div>
       <div/></div><div></div><div></div><div></div><div></div><div/></div><div></div><div></div><div></div><div></div>
-    </span>
   </body>
   <script>
 	document.addEventListener("touchend", function() {
